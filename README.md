@@ -8,4 +8,5 @@
 -Lehe sisu ja eesmärgi planeerimiseks saame kokku ja mõtleme ning arutame koos
   - Veebilehe loomine - kõik
   - Kärje broneerimine - Katariina
+  - Tehnilise poole eest vastutamine - Amanda
 
