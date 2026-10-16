@@ -7,6 +7,6 @@
   - Ideede pakkumine - Kõik
 -Lehe sisu ja eesmärgi planeerimiseks saame kokku ja mõtleme ning arutame koos
   - Veebilehe loomine - kõik
-  - Kärje broneerimine - Katariina
+  - Koostöö haldamine ja tähtaegade eest vastutamine - Katariina
   - Tehnilise poole eest vastutamine - Amanda
 
