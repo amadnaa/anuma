@@ -9,4 +9,4 @@
   - Veebilehe loomine - kõik
   - Koostöö haldamine ja tähtaegade eest vastutamine - Katariina
   - Tehnilise poole eest vastutamine - Amanda
-
+  - Tööde esitamise eest vastutamine - Karoliine
