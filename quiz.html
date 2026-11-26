@@ -50,11 +50,11 @@
     </label>
     <label>
         <input type="radio" name="julge" value="d">
-        d. Suhtlen kõigiga vabalt
+        d. Suhtlen võõrastega vabalt ja julgen juttu alustada
     </label>
     <label>
         <input type="radio" name="julge" value="e">
-        e. Pole mingi parameeter minu jaoks
+        e. Olen uudishimulik ja valmis uusi kohti avastama
     </label>
 </fieldset>
 ˇ<fieldset>
@@ -149,23 +149,62 @@
         e. Väljas
     </label>ˇ
 </fieldset>
+<fieldset>
+    <legend>7. Kui peaksid valima ühe supervõime tänaseks questiks, siis mis see oleks?</legend>
+    <label>
+        <input type="radio" name="supervõime" value="a">
+        a. Telepaatia oma sõpradega, et kõik naljad lendaksid
+    </label>
+    <label>
+        <input type="radio" name="supervõime" value="b">
+        b. Nähtamatus, et saaks rahulikult oma asja ajada
+    </label>
+    <label>
+        <input type="radio" name="supervõime" value="c">
+        c. Lennuvõime, sest see on kõige lahedam
+    </label>
+    <label>
+        <input type="radio" name="supervõime" value="d">
+        d. Iga keele mõistmine, et saaksin suhelda kõigiga
+    </label>
+    <label>
+        <input type="radio" name="supervõime" value="e">
+        e. Röntgenpilk, et leida üles kõik, mida on väärt avastada
+    </label>
+</fieldset>
 <button type="button" onclick="arvutaTulemused()">Valmis</button>
 </form>
 <p id="tulemus"></p>
 
 <script>
-    function arvutaTulemused() {
-        const loendur = { a: 0, b: 0, c: 0, d: 0, e: 0 };
-        const valitudNupud = document.querySelectorAll('input[type="radio"]:checked');
+function arvutaTulemused() {
+    const loendur = { a: 0, b: 0, c: 0, d: 0, e: 0 };
+    const valitudNupud = document.querySelectorAll('input[type="radio"]:checked');
 
-        valitudNupud.forEach(nupp => {
-            const valik = nupp.value;
-            if (loendur.hasOwnProperty(valik)) {
-                loendur[valik]++;
-            }
-        });
+    valitudNupud.forEach(nupp => {
+        const valik = nupp.value;
+        if (loendur.hasOwnProperty(valik)) {
+            loendur[valik]++;
+        }
+    });
+    const kategooriad = {
+        a: "sotsiaalsete tegevuste",
+        b: "rahulikumate tegevuste",
+        c: "julgetele mõeldud",
+        d: "kohtu võõrastega",
+        e: "avasta Tartut"
+    };
+    let parimTäht = 'a';
+    let maxPunktid = loendur.a;
 
-        const tulemuseTekst = `(a: ${loendur.a}, b: ${loendur.b}, c: ${loendur.c}, d: ${loendur.d}, e: ${loendur.e})`;
-        document.getElementById('tulemus').innerText = "Tulemused: " + tulemuseTekst;
+    for (const [taht, punktid] of Object.entries(loendur)) {
+        if (punktid > maxPunktid) {
+            maxPunktid = punktid;
+            parimTäht = taht;
+        }
     }
+
+    const soovituseTekst = "Kui sul oli enim valitud varianti " + parimTäht.toUpperCase() + ", siis soovitame vaadata " + kategooriad[parimTäht] + " kategooriasse!";
+    document.getElementById('tulemus').innerText = soovituseTekst;
+}
 </script>
