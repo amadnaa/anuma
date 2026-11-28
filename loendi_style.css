@@ -1,10 +1,14 @@
 body {
     background-color: rgb(52, 52, 93);
+    position: relative;
 }
 h1{
     color: Snow;
     font-family:Georgia, 'Times New Roman', Times, serif ;
     text-align: center;
+}
+h3{
+    margin-left: 10px
 }
 
 p {
@@ -13,10 +17,65 @@ p {
     text-align: center;
 }
 
-a {
+.pealkirja_kast {
+    background-color: rgb(52, 52, 93);
+    border: 0px solid;
+    border-radius: 20px;
+    padding: 30 px;
+    max-width: 500px;
+    margin: 20px auto; 
+}
+
+.rühm_kast {
+    background-color: rgb(173, 173, 232);
+    border: 1px solid;
+    border-radius: 20px;
+    padding: 30 px;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.lumehelves {
+    position: absolute;
     color: snow;
+    user-select: none;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+a {
+    color: rgb(23, 0, 56);
+    font-size: 20px;
 }
 
 ul {
-    color: snow;
+    color: rgb(23, 0, 56);
+
+}
+
+.Tagasi_avalehele {
+    background-color: rgb(173, 173, 232);
+    border: 3px solid rgb(52, 52, 93);
+    border-radius: 5px;
+    padding: 5px;
+    max-width: 500px;
+    margin: 20px auto;
+    position: fixed;
+    bottom: 0px;
+    left: 20px;
+    z-index: 9999;
+}
+
+.Testi_juurde {
+    background-color: rgb(173, 173, 232);
+    border: 3px solid rgb(52, 52, 93);
+    border-radius: 5px;
+    padding: 5px;
+    max-width: 500px;
+    margin: 20px auto;
+    position: fixed;
+    bottom: 0px;
+    right: 20px;
+    z-index: 9999;
+    
 }
